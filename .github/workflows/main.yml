@@ -1,0 +1,44 @@
+name: AutomatedTests
+
+on: push
+   
+
+jobs:
+  test_case_1:
+    name: Test Case 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run Test Case 1
+        run: python find_lowest_number.py test_data/test1_input.txt test_data/test1_output.txt
+        
+      - name: Compare Output
+        run: diff test_data/test1_output.txt test_data/test1_expected.txt
+
+  test_case_2:
+    name: Test Case 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run Test Case 2
+        run: python find_lowest_number.py test_data/test2_input.txt test_data/test2_output.txt
+        
+      - name: Compare Output
+        run: diff test_data/test2_output.txt test_data/test2_expected.txt
+
+  test_case_3:
+    name: Test Case 3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run Test Case 3
+        run: python find_lowest_number.py test_data/test3_input.txt test_data/test3_output.txt
+        
+      - name: Compare Output
+        run: diff test_data/test3_output.txt test_data/test3_expected.txt
