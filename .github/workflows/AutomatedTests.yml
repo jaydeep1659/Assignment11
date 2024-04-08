@@ -28,7 +28,7 @@ jobs:
         run: python find_lowest_number.py test_data/test2_input.txt output.txt
         
       - name: Compare Output
-        run: diff-ignore-all-space- output.txt test_data/test2_expected.txt
+        run: diff output.txt test_data/test2_expected.txt
 
   test_case_3:
     name: Test Case 3
