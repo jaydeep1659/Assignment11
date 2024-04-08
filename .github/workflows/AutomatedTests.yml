@@ -14,7 +14,7 @@ jobs:
         run: python find_lowest_number.py test_data/test1_input.txt output.txt
         
       - name: Compare Output
-        run: diff output.txt test_data/test1_expected.txt
+        run: diff -Z output.txt test_data/test1_expected.txt
 
   test_case_2:
     name: Test Case 2
